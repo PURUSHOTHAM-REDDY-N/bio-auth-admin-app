@@ -1,0 +1,7 @@
+{
+  "name": "bio-auth-admin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

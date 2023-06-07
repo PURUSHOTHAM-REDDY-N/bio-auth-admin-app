@@ -1,0 +1,58 @@
+<!-- add-user-form.component.html -->
+<ion-content>
+    <ion-row>
+        <ion-col size="12" >
+            <ion-label>
+            <ion-back-button class="ion-float-start" defaultHref="home"></ion-back-button>
+            </ion-label>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col size="12">
+            <form [formGroup]="userForm" (ngSubmit)="submitForm()" class="form-container">
+                <ion-list class="form-list">
+                    <ion-item>
+                        <ion-label position="floating">Name</ion-label>
+                        <ion-input formControlName="name" placeholder="Enter name"></ion-input>
+                    </ion-item>
+                    <ion-note *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched"
+                              class="error-message">
+                        Please enter a valid name.
+                    </ion-note>
+
+                    <ion-item>
+                        <ion-label position="floating">Username</ion-label>
+                        <ion-input formControlName="username" placeholder="Enter username"></ion-input>
+                    </ion-item>
+                    <ion-note *ngIf="userForm.controls['username'].invalid && userForm.controls['username'].touched"
+                              class="error-message">
+                        Please enter a valid username.
+                    </ion-note>
+
+                    <ion-item>
+                        <ion-label position="floating">Password</ion-label>
+                        <ion-input formControlName="password" type="password" placeholder="Enter password"></ion-input>
+                    </ion-item>
+                    <ion-note *ngIf="userForm.controls['password'].invalid && userForm.controls['password'].touched"
+                              class="error-message">
+                        Please enter a valid password.
+                    </ion-note>
+                </ion-list>
+
+                <ion-button expand="block" color="primary" type="submit" [disabled]="userForm.invalid" class="submit-button">
+                    Add User
+                </ion-button>
+            </form>
+
+        </ion-col>
+
+        <ion-col class="form-container">
+            <ion-button expand="block" color="primary" routerLink="/getuser">Users List</ion-button>
+
+        </ion-col>
+
+    </ion-row>
+
+
+</ion-content>

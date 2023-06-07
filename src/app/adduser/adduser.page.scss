@@ -1,0 +1,40 @@
+/* add-user-form.component.scss */
+.form-container {
+  padding: 20px;
+}
+
+.form-list {
+  --padding-end: 0;
+}
+
+.error-message {
+  color: var(--ion-color-danger);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.submit-button {
+  margin-top: 20px;
+}
+
+//gev
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  max-width: 400px;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+  padding: 20px;
+}

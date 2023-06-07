@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Users
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!--    <ion-list *ngFor="let user of users">-->
+    <!--            <ion-label>{{ user.name }}</ion-label>-->
+    <!--            <ion-item>{{ user.username }}</ion-item>-->
+    <!--            <ion-item>Intime: {{ user.intime }}</ion-item>-->
+    <!--            <ion-item>Outtime: {{ user.outtime }}</ion-item>-->
+    <!--            <ion-item>Latin: {{ user.latin }}</ion-item>-->
+    <!--            <ion-item>Longin: {{ user.longin }}</ion-item>-->
+    <!--            <ion-item>Latout: {{ user.latout }}</ion-item>-->
+    <!--            <ion-item>Longout: {{ user.longout }}</ion-item>-->
+    <!--    </ion-list>-->
+
+<!--    <ion-row *ngFor="let user of users">-->
+<!--        <ion-col size="12" class="ion-text-center">-->
+<!--            <ion-label>{{ user.name }}</ion-label>-->
+<!--        </ion-col>-->
+<!--        <ion-col size="6" class="ion-text-center">-->
+<!--            <ion-label>In Details</ion-label>-->
+<!--            <br>-->
+<!--            <ion-label></ion-label>-->
+<!--        </ion-col>-->
+<!--        <ion-col size="6" class="ion-text-center">-->
+<!--            <ion-label>Out Details</ion-label>-->
+<!--        </ion-col>-->
+<!--    </ion-row>-->
+
+    <ion-item class="ion-margin-vertical" (click)="goToUserDetails(user.username)" style="background-color: transparent" button detail="true" *ngFor="let user of users">
+<!--        <ion-avatar slot="start">-->
+<!--            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg"/>-->
+<!--        </ion-avatar>-->
+        <ngx-avatars slot="start" name="{{user.name}}"></ngx-avatars>
+        <ion-label> {{user.name}} </ion-label>
+    </ion-item>
+</ion-content>

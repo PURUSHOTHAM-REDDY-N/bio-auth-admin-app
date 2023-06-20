@@ -26,7 +26,11 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 
-.font-700{
+* {
+  text-transform: none;
+}
+
+.font-weight-700{
   font-weight: 700;
 }
 
@@ -36,5 +40,22 @@
 
 .font-24{
   font-size: 24px;
+}
+
+.row-align-center {
+  align-items: center;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.default-horizontal-padding {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.text-transform-none {
+
 }
 

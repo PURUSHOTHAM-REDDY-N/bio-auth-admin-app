@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -13,8 +14,13 @@ export class HomePage {
 
     biometricType: string = "check availability first"
 
+  logout() {
+      localStorage.removeItem('token');
+      this.router.navigate(['login']);
+  }
 
-    constructor() {
+
+    constructor(private router: Router) {
     }
 
     ngOnInit() {
